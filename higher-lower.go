@@ -27,7 +27,11 @@ func main() {
 
 	for PlayAgain == "yes" || PlayAgain == "Yes" || PlayAgain == "YES" || PlayAgain == "y" || PlayAgain == "Y" {
 		Games++
-		colorstring.Println("\n[blue]On what difficulty do you want to play on?\n[white]1. [green]Easy: 10 guesses\n[white]2. [yellow]Medium: 7 guesses\n[white]3. [red]Hard: 4 guesses\n[white]4. [green]I[yellow]n[red]s[blue]a[green]n[yellow]e: [red]1 guess\n")
+		colorstring.Println("[blue]On what difficulty do you want to play on?")
+		colorstring.Println("[white]1. [green]Easy: 10 guesses")
+		colorstring.Println("[white]2. [yellow]Medium: 7 guesses")
+		colorstring.Println("[white]3. [red]Hard: 4 guesses")
+		colorstring.Println("[white]4. [green]I[yellow]n[red]s[blue]a[green]n[yellow]e: [red]1 guess")
 		for difficulty < 1 || difficulty > 4 {
 			fmt.Scan(&difficulty)
 			switch difficulty {
