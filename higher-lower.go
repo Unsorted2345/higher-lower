@@ -22,16 +22,18 @@ func main() {
 		roundWon          bool
 		RoundAvarageTrue  float64 = 0.0
 	)
-
+	fmt.Println(" ")
 	colorstring.Println("[yellow]Welcome to higher lower!\n[white]A game that makes you adicted!")
 
 	for PlayAgain == "yes" || PlayAgain == "Yes" || PlayAgain == "YES" || PlayAgain == "y" || PlayAgain == "Y" {
 		Games++
+		fmt.Println(" ")
 		colorstring.Println("[blue]On what difficulty do you want to play on?")
 		colorstring.Println("[white]1. [green]Easy: 10 guesses")
 		colorstring.Println("[white]2. [yellow]Medium: 7 guesses")
 		colorstring.Println("[white]3. [red]Hard: 4 guesses")
 		colorstring.Println("[white]4. [green]I[yellow]n[red]s[blue]a[green]n[yellow]e: [red]1 guess")
+		fmt.Println(" ")
 		for difficulty < 1 || difficulty > 4 {
 			fmt.Scan(&difficulty)
 			switch difficulty {
@@ -80,8 +82,8 @@ func main() {
 			colorstring.Printf("[white]the number was [green]%v\n", numberToGuess)
 		}
 
-		colorstring.Printf("[white]You played [green]%v [white]games. [green]%v [white]of these where won with an average of [green]%v [white]guesses per game.\n", Games, roundsWon, RoundAvarageTrue)
-		colorstring.Print("[white]Would you like to play again? (yes/no): ")
+		colorstring.Printf("[white]You played [green]%v [white]games. [green]%v [white]of those where won with an average of [green]%v [white]guesses per game.\n", Games, roundsWon, RoundAvarageTrue)
+		colorstring.Print("[white]Would you like to play again? ([green]yes[white]/[red]no[white]): ")
 		fmt.Scan(&PlayAgain)
 
 		Guesses = 0
